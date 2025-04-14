@@ -7,11 +7,24 @@ object pepita {
     energy = energy - minutes * 3
   }
 }
-/*una remera roja de lino, pesa 800 gramos.
-una pelota parda de cuero, pesa 1300 gramos.
-una biblioteca verde de madera, pesa 8000 gramos.
-un muñeco celeste de vidrio, de peso variable.
-una placa de cobre, de peso y color variables.*/
+
+object cajita {
+    var color = rojo
+    var material = cobre
+    var objetoAdrentro = 0 //cualquier objeto definido anteriormente y puede cambiar
+    var pesoEnGramos = 400 // más el peso de lo que tiene adentro
+}
+object arito {
+    var color = celeste
+    var material = cobre
+    var pesoEnGramos = 180
+}
+
+object banquito {
+    var color = naranja // al principio es naranja pero puede cambair
+    var material = madera
+    var pesoEnGramos = 1700
+}
 
 object placa {
     var color = rojo
@@ -78,6 +91,11 @@ object pelota {
 }
 
 //Colores
+object naranja {
+    method esFuerte() {
+        return true
+    }
+}
 object rojo {
         method esFuerte() {
                 return true
