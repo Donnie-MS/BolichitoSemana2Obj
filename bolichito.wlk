@@ -1,23 +1,30 @@
 import objetos.*
+import personas.*
 object bolichito {
-        var vidriera = remera //objeto random que cambia
-        var mostrador = pelota //objeto2 random que cambia
+        var objEnVidriera = remera //objeto random que cambia
+        var objEnMostrador = pelota //objeto2 random que cambia
+        method cambiarObjEnMostrador(objAPoner) {
+                objEnMostrador = objAPoner
+        }
+        method cambiarObjEnVidriera(objAPoner) {
+                objEnVidriera = objAPoner
+        }
         method esBrillante() {
-                return vidriera.esBrillante() and mostrador.esBrillante()
+                return objEnVidriera.material().esBrillante() and objEnMostrador.material().esBrillante()
         }
         method esMonocromatico() {
-                return vidriera.obtenerColor() == mostrador.obtenerColor()
+                return objEnVidriera.color() == objEnMostrador.color()
         }
         method estaEquilibrado() {
-                return mostrador.obtenerPesoEnGramos() > vidriera.obtenerPesoEnGramos()
+                return objEnMostrador.pesoEnGramos() > objEnVidriera.pesoEnGramos()
         }
         method tieneUnObjExhibidoDe(color) {
-                return mostrador.obtenerColor() == color or vidriera.obtenerColor() == color
+                return objEnMostrador.obtenerColor() == color or objEnVidriera.obtenerColor() == color
         }
         method puedeMejorar() {
                 return not self.estaEquilibrado()  or  self.esMonocromatico()
         }
         method sePuedeOfrecerAlgoA(unaPersona) {
-                return unaPersona.leGusta(vidriera) or unaPersona.leGusta(mostrador)
+                return unaPersona.leGusta(objEnVidriera) or unaPersona.leGusta(objEnMostrador)
         }
 }

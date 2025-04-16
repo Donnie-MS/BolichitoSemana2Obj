@@ -1,101 +1,112 @@
-object pepita {
-  var energy = 100
-
-  method obtenerEnergy() = energy
-
-  method fly(minutes) {
-    energy = energy - minutes * 3
-  }
-}
-
 object cajita {
-    var color = rojo
-    var material = cobre
-    var objetoAdentro = null //cualquier objeto definido anteriormente y puede cambiar
-    var pesoEnGramos = 400 // más el peso de lo que tiene adentro
+    var objetoInterno = arito //cualquier objeto definido anteriormente y puede cambiar
+    method pesoEnGramos() {
+        return 400 + objetoAdentro.pesoEnGramos()
+    }
+    method color() {
+        return rojo
+    }
+    method material() {
+        return cobre
+    }
+    method cambiarObjetoInterno(unObjeto) {
+        objetoInterno = unObjeto
+    }
+    method objetoInterno() {
+        return objetoInterno
+    }
 }
 object arito {
-    var color = celeste
-    var material = cobre
-    var pesoEnGramos = 180
+    method color() {
+        return celeste
+    }
+    method material() {
+        return cobre
+    }
+    method pesoEnGramos() {
+        return 180
+    }
 }
 
 object banquito {
-    var color = naranja // al principio es naranja pero puede cambair
-    var material = madera
-    var pesoEnGramos = 1700
+    var colorActual = naranja // al principio es naranja pero puede cambair
+    method material() {
+        return madera
+    }
+    method color() {
+        return colorActual
+    }
     method cambiarDeColorA(unColor) {
-        color = unColor
+        colorActual = unColor
+    }
+    method pesoEnGramos() {
+        return 1700
     }
 }
 
 object placa {
-    var color = rojo
-    var material = cobre
-    var pesoEnGramos = 0 
+    var pesoEnGramosActual = 0 
+    method color() {
+        return rojo
+    }
+    method material() {
+        return cobre
+    }
     method cambiarPesoEnGramos(unPeso) {
-        pesoEnGramos = unPeso
+        pesoEnGramosActual = unPeso
+    }
+    method pesoEnGramos() {
+        return pesoEnGramosActual
     }
 }
 object munieco {
-    var color = celeste
-    var material = vidrio
-    var pesoEnGramos = 200
-    method obtenerColor() {
-        return color
+    var pesoEnGramosActual = 200
+    method color() {
+        return celeste
     }
-    method obtenerMaterial() {
-        return material
+    method material() {
+        return vidrio
     }
     method obtenerPesoEnGramos() {
-        return pesoEnGramos
+        return pesoEnGramosActual
     }
     method cambiarPesoEnGramos(unPeso) {
-        pesoEnGramos = unPeso
+        pesoEnGramosActual = unPeso
     }
 }
 object biblioteca {
-    var color = verde
-    var material = madera
-    var pesoEnGramos = 8000
-    method obtenerColor() {
-        return color
+    method color() {
+        return verde
     }
-    method obtenerMaterial() {
-        return material
+    method material() {
+        return madera
     }
-    method obtenerPesoEnGramos() {
-        return pesoEnGramos
+    method pesoEnGramos() {
+        return 8000
     }
 }
 
 object remera {
-    var color = rojo
-    var material = lino
-    var pesoEnGramos = 800
-    method obtenerColor() {
-        return color
+    method color() {
+        return rojo
     }
     method obtenerPesoEnGramos() {
-        return pesoEnGramos
+        return 800
     }
-    method obtenerMaterial() {
-        return material
+    method material() {
+        return lino
     }
 }
 
 object pelota {
-    var color = pardo
-    var material = cuero
-    var pesoEnGramos = 1300
-    method obtenerColor() {
-        return color
+    method color() {
+        return pardo
     }
-    method obtenerPesoEnGramos() {
-        return pesoEnGramos
+    method pesoEnGramos() {
+        return 1300
     }
-    method obtenerMaterial() {
-        return material
+    method material() {
+        return cuero
     }
 }
 

@@ -1,24 +1,25 @@
+import objetos.*
 object rosa {
         method leGusta(algo) {
-                return algo.obtenerPesoEnGramos() <= 2000
+                return algo.pesoEnGramos() <= 2000
         }
 }
 object estefania {
         method leGusta(algo) {
-                return algo.obtenerColor().esFuerte()
+                return algo.color().esFuerte()
         }
 }
 
 object luisa {
         method leGusta(algo) {
-                return algo.obtenerMaterial().esBrillante()
+                return algo.material().esBrillante()
         }
 }
 
 object juan {
         method leGusta(algo) {
-                return not algo.obtenerColor().esFuerte() or 
-                (algo.obtenerPesoEnGramos() > 1200 
-                and algo.obtenerPesoEnGramos() < 1800)
+                return not algo.color().esFuerte() or 
+                (algo.pesoEnGramos() > 1200 
+                and algo.pesoEnGramos() < 1800)
         }
 }
