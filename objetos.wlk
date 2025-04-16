@@ -1,7 +1,7 @@
 object pepita {
   var energy = 100
 
-  method energy() = energy
+  method obtenerEnergy() = energy
 
   method fly(minutes) {
     energy = energy - minutes * 3
@@ -11,7 +11,7 @@ object pepita {
 object cajita {
     var color = rojo
     var material = cobre
-    var objetoAdrentro = 0 //cualquier objeto definido anteriormente y puede cambiar
+    var objetoAdentro = null //cualquier objeto definido anteriormente y puede cambiar
     var pesoEnGramos = 400 // más el peso de lo que tiene adentro
 }
 object arito {
@@ -24,17 +24,23 @@ object banquito {
     var color = naranja // al principio es naranja pero puede cambair
     var material = madera
     var pesoEnGramos = 1700
+    method cambiarDeColorA(unColor) {
+        color = unColor
+    }
 }
 
 object placa {
     var color = rojo
     var material = cobre
     var pesoEnGramos = 0 
+    method cambiarPesoEnGramos(unPeso) {
+        pesoEnGramos = unPeso
+    }
 }
 object munieco {
     var color = celeste
     var material = vidrio
-    var pesoEnGramos = 0
+    var pesoEnGramos = 200
     method obtenerColor() {
         return color
     }
@@ -43,6 +49,9 @@ object munieco {
     }
     method obtenerPesoEnGramos() {
         return pesoEnGramos
+    }
+    method cambiarPesoEnGramos(unPeso) {
+        pesoEnGramos = unPeso
     }
 }
 object biblioteca {
