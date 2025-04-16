@@ -1,7 +1,7 @@
 object cajita {
     var objetoInterno = arito //cualquier objeto definido anteriormente y puede cambiar
     method pesoEnGramos() {
-        return 400 + objetoAdentro.pesoEnGramos()
+        return 400 + objetoInterno.pesoEnGramos()
     }
     method color() {
         return rojo
