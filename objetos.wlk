@@ -90,7 +90,7 @@ object remera {
     method color() {
         return rojo
     }
-    method obtenerPesoEnGramos() {
+    method pesoEnGramos() {
         return 800
     }
     method material() {
