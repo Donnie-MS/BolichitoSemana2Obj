@@ -22,3 +22,17 @@ describe "Bolichito: comportamiento cuando es brillante" {
         assert.notThat(bolichito.esBrillante())
     }
 }
+
+describe "Comportamiento: Bolichito es monocromatico" {
+    test "Es monocromatico si ambos objetos son del mismo color" {
+        bolichito.cambiarObjEnMostrador(pelota)
+        bolichito.cambiarObjEnVidriera(pelota)
+        assert.that(bolichito.esMonocromatico())
+    }
+    test "No es monocromatico si los objetos son de distinto color" {
+        bolichito.cambiarObjEnMostrador(pelota)
+        bolichito.cambiarObjEnVidriera(placa)
+        assert.notThat(bolichito.esMonocromatico())
+    }
+}
+
