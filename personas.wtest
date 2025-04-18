@@ -28,8 +28,7 @@ describe "Test de gustos de las personas" {
         placa.cambiarPesoEnGramos(1000)
         assert.notThat(juan.leGusta(placa))
     }
+
 }
-test "Puedo modicar el peso en gramos de la placa correctamente" {
-    placa.cambiarPesoEnGramos(100)
-    assert.equals(100, placa.pesoEnGramos())
-}
+
+

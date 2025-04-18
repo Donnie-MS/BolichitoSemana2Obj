@@ -46,14 +46,18 @@ object banquito {
 
 object placa {
     var pesoEnGramosActual = 0 
-    method color() {
-        return rojo
-    }
+    var colorActual = rojo
     method material() {
         return cobre
     }
+    method color() {
+        return colorActual
+    }
     method cambiarPesoEnGramos(unPeso) {
         pesoEnGramosActual = unPeso
+    }
+    method cambiarColor(unColor) {
+        colorActual = unColor
     }
     method pesoEnGramos() {
         return pesoEnGramosActual
@@ -67,7 +71,7 @@ object munieco {
     method material() {
         return vidrio
     }
-    method obtenerPesoEnGramos() {
+    method pesoEnGramos() {
         return pesoEnGramosActual
     }
     method cambiarPesoEnGramos(unPeso) {

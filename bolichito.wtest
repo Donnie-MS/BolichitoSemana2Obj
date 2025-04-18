@@ -1,0 +1,24 @@
+import bolichito.*
+import objetos.*
+describe "Bolichito: comportamiento cuando es brillante" {   
+    test "No es brillante si ambos objetos no son brillantes" {
+        bolichito.cambiarObjEnMostrador(pelota)
+        bolichito.cambiarObjEnVidriera(pelota)
+        assert.notThat(bolichito.esBrillante())
+    }
+    test "Es brillante si ambos objetos son brillantes" {
+        bolichito.cambiarObjEnMostrador(placa)
+        bolichito.cambiarObjEnVidriera(placa)
+        assert.that(bolichito.esBrillante())
+    }
+    test "No es brillante si el objeto de la vidriera no es brillante" {
+        bolichito.cambiarObjEnMostrador(placa)
+        bolichito.cambiarObjEnVidriera(pelota)
+        assert.notThat(bolichito.esBrillante())
+    }
+    test "No es brillante si el objeto del mostrador no es brillante" {
+        bolichito.cambiarObjEnMostrador(pelota)
+        bolichito.cambiarObjEnVidriera(placa)
+        assert.notThat(bolichito.esBrillante())
+    }
+}
